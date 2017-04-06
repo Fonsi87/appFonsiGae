@@ -1,0 +1,125 @@
+<div id="wrapperHeader" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<!-- CARGA DE URLS -->
+	<spring:url value="/inicio" var="url_home" />
+	<spring:url value="/logout" var="desconexion" />
+	
+	<!-- CARGA DE IMAGENES -->
+	<spring:url var="logoBBVA" value="/images/logo_bbva.png" />
+	<spring:url var="langEsp" value="/images/es.png" />
+	<spring:url var="langEng" value="/images/en.png" />
+	<spring:url var="icoSepara" value="/images/ico_separador.png" />
+	<spring:url var="imgReloj" value="/images/ico-modal-cargando.gif" />
+
+	
+	<!-- CARGA DE MENSAJES -->
+	<spring:message code="message.header.titulo.app" var="nombreApp" htmlEscape="false" />
+	<spring:message code="message.language.spanish" var="idiomaES" htmlEscape="false" />
+	<spring:message code="message.language.english" var="idiomaEN" htmlEscape="false" />
+	<spring:message code="message.header.menu1" var="menu1Label" htmlEscape="false" />
+	<spring:message code="message.header.menu2" var="menu2Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3" var="menu3Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu1" var="menu3Submenu1Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu1.desplegable1" var="menu3Submenu1Desplegable1Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu1.desplegable2" var="menu3Submenu1Desplegable2Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu1.desplegable3" var="menu3Submenu1Desplegable3Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu1.desplegable4" var="menu3Submenu1Desplegable4Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu2" var="menu3Submenu2Label" htmlEscape="false" />
+	<spring:message code="message.header.menu3.submenu3" var="menu3Submenu3Label" htmlEscape="false" />
+	<spring:message code="message.desconectar" var="btnDesconectar" htmlEscape="false" />
+	<spring:message code="message.cargando" var="msgCargando" htmlEscape="false" />
+	
+	
+	<!-- CARGA DE FICHEROS CSS -->
+	<spring:url value="/css/header_bbva.css" var="css_header_bbva" />
+	<link rel="stylesheet" type="text/css" media="screen" href="${css_header_bbva}" />
+	
+	<!-- CARGA DE FICHEROS JAVASCRIPT -->
+	<spring:url value="/js/header.js" var="js_header" />
+	<script src="${js_header}" type="text/javascript">;</script>
+	
+	
+    <!-- Esto es para el Truncate en las tablas en IE -->
+	<jsp:text><![CDATA[
+	<!--[if IE]>]]></jsp:text>
+	<style>
+	    table {
+	        table-layout: fixed;
+	     /*  width: 100px;*/
+	    }
+	</style>
+	<jsp:text><![CDATA[
+	<![endif]-->]]></jsp:text>	
+
+
+  	<header class="header">  	
+		<div class="c-structural_header">
+	    	<div role="banner" id="ph_usuario" class="divNavContainerBBVA">
+	        	<div class="logo_bbva">
+	            	<span><img src="${logoBBVA}" /></span>
+	            </div>
+	
+	            <div class="c-menu-auxiliar_R2 connected">
+					<ul>
+						<!--  Para el cambio de idioma de la aplicacion -->
+		                <li style="background: none !important;margin-top: 3px;">
+			                <span style="float: right">
+							    <a href="javascript:void(0);" onclick="javascript:goToUrl('${url_home}'+'?lang=es_ES');"><img src="${langEsp}" title="${idiomaES}" /></a> 
+							    <img style="margin-left: 8px;margin-right: 8px;" src="${icoSepara}" />
+							    <a href="javascript:void(0);" onclick="javascript:goToUrl('${url_home}'+'?lang=en_EN');"><img src="${langEng}" title="${idiomaEN}" /></a>
+							    <img style="margin-left: 8px;margin-right: 8px;" src="${icoSepara}" />
+							</span>
+						</li>
+						
+						<!-- NOMBRE Y APELLIDOS DE USUARIO -->
+						<li class="user-pref" style="margin-left: 0px;padding-left:0px;background-image:none;">
+		                	<span class="user-name" style="cursor:default;">Ildefonso Garcia Garcia</span>
+		                	<!--span class="user-name" style="cursor:default;">${sessionScope.enzi_session_userlocal.usuario.nombreCompleto}</span-->
+						</li>
+						
+						<!-- BOTON DE DESCONEXION -->
+		                <li class="exit" style="margin-right:0px;"><span><a class="disconnect" href="${desconexion}">${btnDesconectar}</a></span></li>
+					</ul>
+	            </div>
+	
+	       		<h1 class="nameApp">${nombreApp}</h1>        
+	        </div>
+	    </div>
+	    
+	    <!-- BARRA DE MENU -->
+	    <nav class="user-connected" id="navigation-menu">
+	        <ul class="nav nav-tabs">
+	            <li id="menuHome" class="index"><a style="background-position: 15px 18px;padding-right:0px !important;" href="javascript:void(0);" onclick="javascript:goToUrl('${url_home}');" class="active">Home</a></li>
+	            <li id="menu1" class="item1"><a style="color: white !important;" href="javascript:void(0);" onclick="javascript:goToUrl('${url_ini}');">${menu1Label}</a></li>
+	            <li id="menu2" class="item4"><a style="color: white !important;" href="javascript:void(0);" onclick="javascript:goToUrl('${url_ini_lyl}');">${menu2Label}</a></li>
+	            <li id="menu3" class="item2 dropdown"><a style="color: white !important;" class="dropdown-toggle" data-toggle="dropdown" href="#">${menu3Label}<span class="caret"><!--  --></span></a>
+           			<ul class="dropdown-menu nav-stacked" style="max-width:200px;">
+         				<li class="dropdown" style="max-height: 38px;max-width:200px;float:left;"><a data-toggle="dropdown" class="dropdown-toggle noitem" >${menu3Submenu1Label}<span class="glyphicon glyphicon-play" style="font-size: 7px;margin-left: 5px;top: -1px;"><!--  --></span></a>
+							<ul class="nav-stacked sub-menu" style="margin-left: 100%; width: 100%;margin-top:-38px;">
+								<li style="max-width: 100%; border-left: 2px solid white;"><a class="noitem" style="padding-right: 50px !important;" href="javascript:void(0);" onclick="javascript:goToUrl('${url_gestionMatrizPlazos}');">${menu3Submenu1Desplegable1Label}</a></li>
+								<li style="max-width: 100%; margin-top: 0px;border-left: 2px solid white;"><a class="noitem" href="javascript:void(0);" onclick="javascript:goToUrl('${url_gestionMnemotecnicos}');">${menu3Submenu1Desplegable2Label}</a></li>
+	  		        			<li style="max-width: 100%; margin-top: 0px;border-left: 2px solid white;"><a class="noitem" href="javascript:void(0);" onclick="javascript:goToUrl('${url_gestionPaises}');">${menu3Submenu1Desplegable3Label}</a></li>
+	  		        			<li style="max-width: 100%; margin-top: 0px;border-left: 2px solid white;"><a class="noitem" href="javascript:void(0);" onclick="javascript:goToUrl('${url_gestionPaises}');">${menu3Submenu1Desplegable4Label}</a></li>
+							</ul>
+						</li>
+						<li style="max-width:200px;float:left;"><a class="noitem" style="padding-right: 50px !important;" href="javascript:void(0);" onclick="javascript:goToUrl('${url_gestionPFs}');">${menu3Submenu2Label}</a></li>
+         				<li style="max-width:200px;float:left;"><a class="noitem" style="padding-right: 50px !important;" href="javascript:void(0);" onclick="javascript:goToUrl('${url_gestionSucursales}');">${menu3Submenu3Label}</a></li>
+           			</ul>
+           		</li>            
+	        </ul>
+	    </nav>
+    
+	</header>
+	
+	
+	<!-- Div para ventana modal de espera -->
+	<div id="dialogEspere" style="display: none;">		
+		<span></span>
+		<img class="relojCarga center" src='${imgReloj}' />
+		<p class="txtCarga" align="center">${msgCargando}</p>		
+	</div>
+	
+	
+</div>

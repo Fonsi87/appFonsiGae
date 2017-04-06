@@ -1,0 +1,501 @@
+/*#wrapperContent { margin-bottom:4em;}*/
+#wrapper #wrapperContent, #wrapperFooter footer, #wrapperHeader { width:80%; margin:0 auto;}
+
+body {
+  color: #094fa4;
+}
+
+.actionButton { cursor: pointer; cursor: hand; color: #006ec1 !important;}
+
+.noActionButton { cursor: pointer; cursor: not-allowed; }
+.header { margin-bottom:0.5em;}
+
+.ui-datepicker-trigger {
+ height: 25px;
+ width: 24px;
+ margin-bottom : 4px;
+ cursor: pointer; cursor: hand;
+}
+
+.btn_tabla {
+	margin: 5px 5px 0px 0px; 
+}
+
+.leyenda {
+	margin-left: 10px !important;
+	padding-top: 10px !important;
+	width: 15% !important;
+	margin-bottom: 5px !important;
+	color: #094fa4 !important;
+	font-size: 15px !important;	
+}
+
+
+/* Sobreescribir estilos para el acordeon de la busqueda inicial */
+.ui-widget-content {
+  /*border: 1px solid #a6c9e2;
+  background: #fcfdfd url(images/ui-bg_inset-hard_100_fcfdfd_1x100.png) 50% bottom repeat-x;*/
+  color: #094fa4;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #cccccc;
+	background: #f5f5f5;
+	font-weight: bold;
+	color: #1c94c4;
+}
+
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #cccccc;
+	background: #f5f5f5;
+	font-weight: bold;
+	color: #1c94c4;
+}
+
+.ui-state-active {
+	border: 1px solid #cccccc;
+}
+
+.ui-autocomplete {
+	max-height: 350px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	/* add padding to account for vertical scrollbar */
+	padding-right: 20px;
+	 z-index:4000 !important;
+}
+
+html {
+overflow: -moz-scrollbars-vertical; 
+overflow-y: scroll;
+}
+
+img.little {
+    height: 12px;
+    width: 12px;
+}
+
+.textoDerecha {
+    position: absolute;
+    right: 0px;
+    width: 383px;   
+    margin-top: -5px; 
+       
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 37px;
+}
+
+p.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-top: 5px;   
+}
+
+#tablaDatosGrupoLyL {
+	border: 0px !important;	
+}
+
+#tablaLimitesGrupoImp{
+	border: 0px !important;	
+}
+
+
+#tablaLineasGrupoImp{
+	border: 0px !important;	
+}
+
+#tablaLineasGrupoPor{
+	border: 0px !important;	
+}
+
+div.ui-tooltip {
+	min-width: 100px;
+}
+
+.truncate {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+
+.nav-tabs > li > a {
+	border: 0px !important;
+}
+
+.nav-tabs {
+	border-bottom: 0px !important;
+}
+
+.nav-tabs > li {
+  margin-right: 0px !important;
+}
+
+.nav-stacked > li {
+  float: right;
+  background-color: #094fa4 !important;
+  width: 100% !important;
+  font-size: 13px !important;
+}
+
+.noitem {
+  background-image: none !important;
+  padding-left: 15px !important;
+  padding-right: 80px !important;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  color: white !important;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+	background-color: transparent !important;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: transparent !important;
+}
+
+.nav > li {
+	max-height: 52px;
+	min-height: 52px;
+}
+
+
+.dropdown-menu .sub-menu {
+    visibility: hidden;
+}
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+
+
+.activemenu {
+    /*background-color: rgb(107, 163, 108) !important;*/
+    /*background-color: linear-gradient(to bottom, #003c72 0%,#00519f 20%) !important;*/
+    background: linear-gradient(#003c72, #00519f) !important;
+}
+
+
+
+
+
+.custom-combobox {
+   	position: relative !important;
+   	display: inline-block !important;
+}
+.custom-combobox-toggle {
+   position: absolute !important;
+   top: 0 !important;
+   bottom: 0 !important;
+   margin-left: -1px !important;
+   padding: 0 !important;
+   border: 1px solid #dddddd !important;
+}
+.custom-combobox-input {
+   margin: 0 !important;
+   padding: 5px 10px !important;
+   
+}
+
+.decimalOne {
+	text-align: right;
+}
+
+.decimalOneTd {
+	text-align: right;
+}
+
+.tdDecimalOne {
+	text-align: right !important;
+}
+
+.tdPlazo {
+	text-align: center !important;
+}
+
+.millDiv {
+	font-size: 12px !important;
+}
+
+.millEur {
+	font-size: 12px !important;
+}
+
+.plazo-sel {
+	font-size: 12px !important;
+}
+
+.inputLyL {
+	font-size: 12px !important;
+}
+
+.inputRight {
+	text-align: right;
+}
+
+.inputHidden {
+	border: 1px solid rgb(239, 239, 239);
+}
+
+.decimalOneDivisa {
+	text-align: right !important;
+}
+
+.recuadro {
+	border: 1px solid #dddddd;
+	border-bottom-right-radius: 4px;
+  	border-bottom-left-radius: 4px;
+  	border-top-right-radius: 4px;
+  	border-top-left-radius: 4px;
+  	padding: 10px;
+}
+
+.valSumCateg {
+	padding-right: 14px !important;	
+}
+
+.btnIfis125 {
+	width: 130px !important;
+}
+
+.btnIfis150 {
+	width: 150px !important;
+}
+
+.btnIfis100 {
+	width: 100px !important;
+}
+
+.rowButton {
+    margin-top: 20px;
+}
+
+.FirstColumn {
+	padding-left: 13px !important;
+}
+
+
+
+html,body {
+    min-height: 100%;
+    position: relative;
+    
+}
+ 
+#wrapper {
+    min-height: 100%;
+    position: relative; 
+}
+ 
+#wrapperHeader {
+    /* ... */
+}
+ 
+#wrapperContent {
+    /* ... */
+    padding-bottom: 40px; /* El tamaño del footer para evitar el sobreposicionamiento */
+}
+ 
+#footer {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.panel {
+	box-shadow: none;
+}
+
+.ui-icon-closethick {
+    /*background-image: url(../images/z_close.gif) !important;*/
+    background-image: url(../images/eliminar.gif) !important;
+    
+    background-position: left top !important;
+    margin-right: 10px !important;
+   /* margin: 0 !important;*/
+}
+
+.ui-dialog .ui-dialog-titlebar-close, .ui-icon-closethick {
+    width: 16px !important;
+    height: 16px !important;
+     margin-right: 5px !important;
+     margin-top: -8px !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    background: none !important;
+    border: none !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close, .ui-dialog .ui-dialog-titlebar-close:hover {
+    padding: 0 !important;
+}
+
+.ui-button-text {
+	padding: 0px !important;
+}
+
+.ui-state-focus {
+	outline: 0 !important;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"], input[type="radio"], input[type="checkbox"] {
+	cursor: pointer;
+}
+
+a.btn-primary-ifis {
+    color: #094fa4;
+    background:  #E2E2E2;
+    border-color: #adadad;
+}
+
+#form_subtablaConsumos .fg-toolbar {
+    display: none !important;
+}
+
+#boxBBVAEntidades tr:hover.Pijama1 {
+    background-color: #f5f5f5;
+}
+
+#boxBBVAEntidades tr:hover.Pijama2  {
+    background-color: #f5f5f5;
+}
+
+/*.excedido {
+	background-color: rgb(249, 187, 187);
+	
+}*/
+
+.classConsumoExc {
+	color: red !important;
+	font-weight: bold;
+	/*color: rgb(249, 187, 187) !important;*/
+}
+
+.classConsumoNoExc {
+	color: #094fa4 !important;
+}
+
+.classConsumoNoInfo {
+	background-color: rgb(249, 187, 187);
+}
+
+
+
+
+
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/* Estilos para el placeholder de los input */
+.form-control::-webkit-input-placeholder { color: #9BC5FB; }
+.form-control:-moz-placeholder { color: #9BC5FB; }
+.form-control::-moz-placeholder { color: #9BC5FB; }
+.form-control:-ms-input-placeholder { color: #9BC5FB; }
+
+/* Estilos para filtro y Nº paginas de datatable en IE */
+.dataTables_length {
+	width: 150px;
+}
+.dataTables_filter {
+	width: 200px;
+}
+.dataTables_filter span {
+	max-width: 50px;
+	float:left;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+.dataTables_filter input {
+	max-width: 150px;
+	float:left;
+}
+
+
+body {
+  font-size: 13px !important;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: normal !important;
+}
+
+.panel-body {
+  padding: 10px 10px 10px 10px !important;
+}
+
+.panel-heading {
+  padding: 10px 10px 10px 10px !important;
+  border-bottom: 1px solid transparent;
+  color: #094fa4 !important;
+  font-weight: bold !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 6px;
+  font-size: 12px !important;
+  vertical-align: middle !important;
+}
+
+.table > tbody > tr > td {
+  color: #094fa4;
+  /*color: #000 !important;*/
+}
+
+.form-control {
+    font-size: 14px !important;
+}
+
+.input-sm {
+	padding: 5px 7px !important;	
+}
+
+
+select[multiple], select[size] {
+  padding: 5px 7px;
+  font-size: 14px;
+  border-radius: 3px;
+  height: 30px;
+  border: 1px solid #ccc;
+}

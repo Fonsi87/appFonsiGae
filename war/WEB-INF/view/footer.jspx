@@ -1,0 +1,19 @@
+<div id="footer" 
+	xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+  	
+  	<!-- OBTENER FECHA ACTUAL - importar fmt en cabecera del JSP -->
+  	<jsp:useBean id="dateNow" class="java.util.Date" />
+	
+	<!-- Mensajes -->
+	<spring:message code="message.footer.firma" var="footerSign"/>
+	
+	<div style="margin-top: 10px;height: 18px;width: 80%;margin-left: 10%;background-color: whitesmoke !important;border-radius: 15px;" align="center" class="footer row">
+		<div class="col-md-12 col-xs-12" style="float:right;background-color: whitesmoke !important;">
+			${footerSign} - <fmt:formatDate type="date" pattern="yyyy" value="${dateNow}" />
+		</div>
+	</div>
+</div>
