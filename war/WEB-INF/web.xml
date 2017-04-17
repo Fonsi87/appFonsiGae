@@ -3,7 +3,7 @@
   <display-name>SpringGAE</display-name>
 	
 	<!-- FILTRO DE SESION -->
-	<!--filter>
+	<filter>
         <filter-name>AppSessionFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
@@ -15,7 +15,7 @@
     
     <listener>
 	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener-->
+	</listener>
 	
 	<servlet>
 		<servlet-name>SpringGAE</servlet-name>

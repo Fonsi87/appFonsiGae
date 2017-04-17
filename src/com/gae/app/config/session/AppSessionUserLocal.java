@@ -1,9 +1,12 @@
 package com.gae.app.config.session;
 
+import java.io.Serializable;
+
 import com.gae.app.config.dto.comunes.AppUsuarioDTO;
 
-public class AppSessionUserLocal {
+public class AppSessionUserLocal implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	public static final String APP_SESSION_USERLOCAL = "app_session_userlocal";
 	
 	private AppUsuarioDTO usuario;

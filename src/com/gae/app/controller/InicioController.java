@@ -26,19 +26,13 @@ public class InicioController {
 		
 		String url = "inicio/inicio";
 		
-		// Se setea el locale al idioma correspondiente
-		Locale userPreferredLocale = request.getLocale();
-		
 		if(request.getParameter("lang") != null && request.getParameter("lang").equalsIgnoreCase("en_EN")){
 			AppSessionManager.getInstance().setLocale(request, LOCALE_ENGLISH);
 		}else if(request.getParameter("lang") != null && request.getParameter("lang").equalsIgnoreCase("es_ES")){
 			AppSessionManager.getInstance().setLocale(request, LOCALE_ESPANIOL);
-		}else if(userPreferredLocale != null){
-			AppSessionManager.getInstance().setLocale(request, userPreferredLocale);
-		} else {
+		}else if(AppSessionManager.getInstance().getLocale(request) == null){
 			AppSessionManager.getInstance().setLocale(request, LOCALE_ESPANIOL);
 		}
-		
 		
 		log.info("*** Acceso a InicioController.menuInicio - FIN");
 		

@@ -24,6 +24,15 @@
 		<property name="basename" value="/WEB-INF/messages/messages" />
 	</bean>
 	
+	<mvc:interceptors>
+	    <mvc:interceptor>
+	        <mvc:mapping path="/**" />
+	        <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+	            <property name="paramName" value="lang" />
+	        </bean>
+	    </mvc:interceptor>
+	</mvc:interceptors>
+	
 	<bean class="org.springframework.web.servlet.i18n.CookieLocaleResolver" id="localeResolver" p:cookieName="locale"/>
 <!-- 	<bean name="AppSessionFilter" class="com.gae.app.config.session.AppSessionFilter" /> -->
     

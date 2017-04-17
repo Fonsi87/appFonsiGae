@@ -3,6 +3,7 @@
 	<application>spring-gae</application>
 	<version>1</version>
 	<threadsafe>true</threadsafe>
+	<sessions-enabled>true</sessions-enabled>
 	
 	<!-- Configure java.util.logging -->
 	<system-properties>

@@ -43,36 +43,12 @@ public class AppSessionFilter implements Filter {
 			log.debug("********** SessionFilter: Request inicial con url de desconexion: " + requestedUri + " **********");
 		}
 
-//		if (requestedUri.contains(LOGOUT_SUFIX)) {
-//			log.debug("********** SessionFilter: Procediendo a eliminar la sesion");
-//			eliminarSesion(req, (HttpServletResponse) response);
-//		} else {
-//			if (ArqSpringContext.getPropiedadDeContexto("idSesionInicial") != null && session != null && 
-//								(((String) ArqSpringContext.getPropiedadDeContexto("idSesionInicial")).compareTo(session.getId()) != 0)) {
-//				acceso = false;
-//			} else if (req.getSession(false) != null) {
-//				if (ArqSpringContext.getContextoEscritorio().getPerfil().getUsuario() != null) {
-					if (AppSessionManager.getInstance().getLocale(req) == null) {
-						this.iniciarSesion(req);							
-					}
-//
-////					ArqSpringContext.setPropiedadContexto("idSesionInicial", req.getSession(false).getId());
-//					
-//					if (log.isDebugEnabled()) {
-//						log.debug("**** Sesion valida ****");
-//					}
-//					acceso = true;
-//					chain.doFilter(request, response);
-//				} else {
-//					acceso = false;
-//				}
-//			}
-//
-//			if (!acceso) {
-//				eliminarSesion(req, (HttpServletResponse) response);
-//			}
-//		}
-
+		if (AppSessionManager.getInstance().getLocale(req) == null) {
+			this.iniciarSesion(req);							
+		}
+		
+		chain.doFilter(request, response);
+		
 		if (log.isDebugEnabled()) {
 			log.debug("********** SessionFilter Finalizado **********");
 		}
