@@ -23,16 +23,6 @@
 	</servlet>
 	
 	
-	<servlet>
-		<servlet-name>GoogleAuthorization</servlet-name>
-		<servlet-class>com.gae.app.security.GoogleAuthorization</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>GoogleAuthorizationCallback</servlet-name>
-		<servlet-class>com.gae.app.security.GoogleAuthorizationCallback</servlet-class>
-	</servlet>
-	
-	
 	<servlet-mapping>
 		<servlet-name>SpringGAE</servlet-name>
 		<url-pattern>/springgae</url-pattern>

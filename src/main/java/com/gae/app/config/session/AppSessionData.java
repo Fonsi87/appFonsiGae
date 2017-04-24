@@ -9,14 +9,23 @@ public class AppSessionData implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public static final String APP_SESSION_DATA = "app_session_data";
 	
-	private AppUsuarioDTO usuario;
+	//Datos de navegador
 	private String locale;	
-	// Tiempos de timeout para la ventana de Logout	
-//	private String timeWarnAfter;
-//	private String timeRedirAfter;
-//	private String numRefresh;
-//	private boolean perfilCargado;	
 	private String browserLocal;
+	
+	//Datos de seguridad
+	private String authCode;
+	private String accessToken;
+	private String tokenType;
+	private String expiresIn;
+	private String refreshToken;
+	private String idToken;
+	
+	//Datos de usuario
+	private AppUsuarioDTO usuario;
+	
+	
+	
 
 	public String getBrowserLocal() {
 		return browserLocal;
@@ -41,12 +50,55 @@ public class AppSessionData implements Serializable {
 	public void setLocale(String locale) {
 		this.locale = locale;
 	}
-	
-	
+	public String getAccessToken() {
+		return accessToken;
+	}
+	public void setAccessToken(String accessToken) {
+		this.accessToken = accessToken;
+	}
+	public String getTokenType() {
+		return tokenType;
+	}
+	public void setTokenType(String tokenType) {
+		this.tokenType = tokenType;
+	}
+	public String getExpiresIn() {
+		return expiresIn;
+	}
+	public void setExpiresIn(String expiresIn) {
+		this.expiresIn = expiresIn;
+	}
+	public String getRefreshToken() {
+		return refreshToken;
+	}
+	public void setRefreshToken(String refreshToken) {
+		this.refreshToken = refreshToken;
+	}
+	public String getIdToken() {
+		return idToken;
+	}
+	public void setIdToken(String idToken) {
+		this.idToken = idToken;
+	}
+	public String getAuthCode() {
+		return authCode;
+	}
+
+	public void setAuthCode(String authCode) {
+		this.authCode = authCode;
+	}
 
 	@Override
 	public String toString() {		
 		return "AppSessionData [usuario=" + usuario + ", locale=" + locale 
-				+ ", browserLocal=" + browserLocal + "]";
+				+ ", browserLocal=" + browserLocal + ", accessToken=" + accessToken 
+				+ ", tokenType=" + tokenType + ", expiresIn=" + expiresIn
+				+ ", refreshToken=" + refreshToken + ", idToken=" + idToken
+				+ ", authCode=" + authCode
+				+ "]";
 	}
 }
+
+
+
+

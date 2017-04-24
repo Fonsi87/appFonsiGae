@@ -1,10 +1,6 @@
 package com.gae.app.config.session;
 
-import java.util.Locale;
-
 import javax.servlet.http.HttpServletRequest;
-
-import com.gae.app.config.dto.comunes.AppUsuarioDTO;
 
 /**
  * Clase Manager para la gestión de la sesion. Se encarga de inicializarla o instanciarla y 
@@ -29,14 +25,14 @@ public final class AppSessionManager {
 
 	
 	
-	public AppSessionData initSession(HttpServletRequest httpServletRequest, String locale) {
+	public AppSessionData initSession(HttpServletRequest httpServletRequest) {
 		// 1.- Se crea el objeto session
 		AppSessionData sessionData = new AppSessionData();
-		// 2.- Se cargan los datos en el objeto de session
-		sessionData.setLocale(locale);
-		// 3.- Se carga el objeto en session
+
+		// 2.- Se carga el objeto en session
 		savesessionData(httpServletRequest, sessionData);
-		// 4.- Return
+		
+		// 3.- Return
 		return sessionData;
 	}
 
@@ -59,12 +55,12 @@ public final class AppSessionManager {
 	 * @param httpServletRequest
 	 * @return
 	 */
-	public AppSessionObject loadSessionObject(HttpServletRequest httpServletRequest) {
-		// 1.- Se carga el objeto de la session
-		AppSessionObject  sessionObject =  (AppSessionObject) httpServletRequest.getSession().getAttribute(AppSessionObject.APP_SESSION_OBJECT);
-		// 2.- Return
-		return sessionObject;
-	}
+//	public AppSessionObject loadSessionObject(HttpServletRequest httpServletRequest) {
+//		// 1.- Se carga el objeto de la session
+//		AppSessionObject  sessionObject =  (AppSessionObject) httpServletRequest.getSession().getAttribute(AppSessionObject.APP_SESSION_OBJECT);
+//		// 2.- Return
+//		return sessionObject;
+//	}
 
 	/**
 	 * 
@@ -79,51 +75,56 @@ public final class AppSessionManager {
 	}
 
 
-	/**
-	 * 
-	 * @param httpServletRequest
-	 * @param locale
-	 * @return
-	 */
-	public boolean setLocale(HttpServletRequest httpServletRequest,Locale locale) {
-		// 0.- Se comprueba que los objetos no son nulos
-		if (httpServletRequest == null || locale == null) {
-			return false;
-		}
-		// 1.- Se carga el objeto de la session
-		AppSessionData sessionData = loadsessionData(httpServletRequest);
-		// 2.- Se comprueba que existe el objeto de session
-		if (sessionData == null) {
-			return false;
-		}
-		sessionData.setLocale(locale.toString());
-		// 3.- Se carga el objeto actualizado en session
-		savesessionData(httpServletRequest, sessionData);
-		// 4.- Return
-		return true;
-	}
-
-	/**
-	 * 
-	 * @param httpServletRequest
-	 * @return
-	 */
-	public String getLocale(HttpServletRequest httpServletRequest) {
-		// 0.- Se comprueba que los objetos no son nulos
-		if (httpServletRequest == null) {
-			return null;
-		}
-		// 1.- Se carga el objeto de la session
-		AppSessionData sessionData = loadsessionData(httpServletRequest);
-		// 2.- Se comprueba que existe el objeto de session
-		if (sessionData == null) {
-			return null;
-		}
-		// 4.- Return
-		return sessionData.getLocale();
-
-	}
+//	/**
+//	 * 
+//	 * @param httpServletRequest
+//	 * @param locale
+//	 * @return
+//	 */
+//	public boolean setLocale(HttpServletRequest httpServletRequest,Locale locale) {
+//		// 0.- Se comprueba que los objetos no son nulos
+//		if (httpServletRequest == null || locale == null) {
+//			return false;
+//		}
+//		// 1.- Se carga el objeto de la session
+//		AppSessionData sessionData = loadsessionData(httpServletRequest);
+//		// 2.- Se comprueba que existe el objeto de session
+//		if (sessionData == null) {
+//			return false;
+//		}
+//		sessionData.setLocale(locale.toString());
+//		// 3.- Se carga el objeto actualizado en session
+//		savesessionData(httpServletRequest, sessionData);
+//		// 4.- Return
+//		return true;
+//	}
+//
+//	/**
+//	 * 
+//	 * @param httpServletRequest
+//	 * @return
+//	 */
+//	public String getLocale(HttpServletRequest httpServletRequest) {
+//		// 0.- Se comprueba que los objetos no son nulos
+//		if (httpServletRequest == null) {
+//			return null;
+//		}
+//		// 1.- Se carga el objeto de la session
+//		AppSessionData sessionData = loadsessionData(httpServletRequest);
+//		// 2.- Se comprueba que existe el objeto de session
+//		if (sessionData == null) {
+//			return null;
+//		}
+//		// 4.- Return
+//		return sessionData.getLocale();
+//	}
 	
+	public AppSessionData getSessionData(HttpServletRequest httpServletRequest) {
+		
+		AppSessionData sessionData = loadsessionData(httpServletRequest);
+		
+		return sessionData;
+	}
 	
 	
 }
