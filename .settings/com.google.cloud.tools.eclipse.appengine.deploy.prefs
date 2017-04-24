@@ -1,7 +1,8 @@
 account.email=i.garcia.garcia.contractor@bbva.com
 eclipse.preferences.version=1
+include.optional.configuration.files=true
 project.bucket=
-project.id=control-incurridos
+project.id=pruebaoauth2-165118
 project.previousVersion.stop=true
 project.promote=true
 project.version=1

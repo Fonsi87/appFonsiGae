@@ -97,8 +97,6 @@ public class InicioController {
 	    log.info("*** Acceso a InicioController.errorCallback - INICIO");
 		
 		String url = "errorcallback/error";
-//		AppSessionManager.getInstance().destroySessionObject(request);
-//		((HttpServletResponse)response).sendRedirect(url);
 		
 		log.info("*** Acceso a InicioController.errorCallback - FIN");
 		

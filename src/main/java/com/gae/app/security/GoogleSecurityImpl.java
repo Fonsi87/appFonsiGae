@@ -32,7 +32,7 @@ public class GoogleSecurityImpl implements GoogleSecurity  {
 		String urlTokenGoogle = SecurityConstants.GOOGLE_API_URL_TOKEN+"?code="+authCode
 				+"&client_id="+SecurityConstants.GOOGLE_CLIENT_ID
 				+"&client_secret="+SecurityConstants.GOOGLE_CLIENT_SECRET
-				+"&redirect_uri="+SecurityConstants.GOOGLE_REDIRECT_URI_REAL
+				+"&redirect_uri="+SecurityConstants.GOOGLE_DOMAIN+SecurityConstants.GOOGLE_REDIRECT_URI
 				+"&grant_type="+"authorization_code";
 		
 		boolean esError = getTokenGoogle(request, urlTokenGoogle);

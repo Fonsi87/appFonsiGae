@@ -50,7 +50,7 @@ public class AppSessionFilter implements Filter {
 			String urlAuthorizationGoogle = SecurityConstants.GOOGLE_API_URL_AUTH+"?scope="+SecurityConstants.GOOGLE_SCOPE_USER_EMAIL+" "+SecurityConstants.GOOGLE_SCOPE_DRIVE+" "+SecurityConstants.GOOGLE_SCOPE_USER_PROFILE
 																						+"&access_type="+SecurityConstants.GOOGLE_ACCESS_TYPE
 																						+"&include_granted_scopes"+SecurityConstants.GOOGLE_INCLUDE_GRANTED_SCOPES
-																						+"&redirect_uri="+SecurityConstants.GOOGLE_REDIRECT_URI
+																						+"&redirect_uri="+SecurityConstants.GOOGLE_DOMAIN+SecurityConstants.GOOGLE_REDIRECT_URI
 																						+"&response_type="+SecurityConstants.GOOGLE_RESPONSE_TYPE
 																						+"&client_id="+SecurityConstants.GOOGLE_CLIENT_ID;
 			((HttpServletResponse)response).sendRedirect(urlAuthorizationGoogle);

@@ -2,9 +2,12 @@ package com.gae.app.security;
 
 public class SecurityConstants {
 		
-	
-		// Documentation in https://developers.google.com/identity/protocols/OAuth2WebServer
-	
+		
+	   public static final String GOOGLE_DOMAIN = "http://localhost:8080/";
+	   //public static final String GOOGLE_DOMAIN = "https://pruebaoauth2-165118.appspot.com/";
+	   
+	   
+	   // Documentation in https://developers.google.com/identity/protocols/OAuth2WebServer
 	   // Client ID
 	   public static final String GOOGLE_CLIENT_ID = "451697835188-fh1akc044l7pvlkjkjh9uhfca1enavks.apps.googleusercontent.com";
 	 
@@ -12,16 +15,15 @@ public class SecurityConstants {
 	   public static final String GOOGLE_CLIENT_SECRET = "MESf70JAEYTsSi9HStuI0w4V";
 	 
 	   // Redirect URI (cambiar "/" por "%2F" y ":" por "%3A")
-	   public static final String GOOGLE_REDIRECT_URI = "http%3A%2F%2Flocalhost%3A8080%2Foauth2callback";
-	   public static final String GOOGLE_REDIRECT_URI_REAL = "http://localhost:8080/oauth2callback";
+	   public static final String GOOGLE_REDIRECT_URI = "oauth2callback";
 	   
 	   // Response Type
 	   public static final String GOOGLE_RESPONSE_TYPE = "code";
 	   
 	   // Scope Authorization (cambiar "/" por "%2F" y ":" por "%3A")
-	   public static final String GOOGLE_SCOPE_DRIVE = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive";
-	   public static final String GOOGLE_SCOPE_USER_EMAIL = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email";
-	   public static final String GOOGLE_SCOPE_USER_PROFILE = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile";
+	   public static final String GOOGLE_SCOPE_DRIVE = "https://www.googleapis.com/auth/drive";
+	   public static final String GOOGLE_SCOPE_USER_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
+	   public static final String GOOGLE_SCOPE_USER_PROFILE = "https://www.googleapis.com/auth/userinfo.profile";
 	   
 	   // Access Type
 	   public static final String GOOGLE_ACCESS_TYPE = "offline";
