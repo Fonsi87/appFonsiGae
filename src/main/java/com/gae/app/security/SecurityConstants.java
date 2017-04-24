@@ -31,7 +31,11 @@ public class SecurityConstants {
 	   
 	   //APIs de Google -> Se cogen de https://developers.google.com/oauthplayground/
 	   public static final String GOOGLE_API_URL_USER_DATA = "https://www.googleapis.com/userinfo/v2/me";
-	   public static final String GOOGLE_API_URL_AUTH = "https://www.googleapis.com/oauth2/v4/token";
+	   public static final String GOOGLE_API_URL_TOKEN = "https://www.googleapis.com/oauth2/v4/token";
+	   public static final String GOOGLE_API_URL_AUTH = "https://accounts.google.com/o/oauth2/v2/auth";
+	   
+	   //Dominio email permitido en aplicativo
+	   public static final String GOOGLE_DOMAIN_PERMISSION = "bbva.com";
 	   
 	   
 }

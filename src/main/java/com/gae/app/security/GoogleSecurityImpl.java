@@ -29,7 +29,7 @@ public class GoogleSecurityImpl implements GoogleSecurity  {
 		AppSessionManager.getInstance().getSessionData(request).setAuthCode(authCode);
 		
 		//Se prepara URL para recuperar el Token
-		String urlTokenGoogle = SecurityConstants.GOOGLE_API_URL_AUTH+"?code="+authCode
+		String urlTokenGoogle = SecurityConstants.GOOGLE_API_URL_TOKEN+"?code="+authCode
 				+"&client_id="+SecurityConstants.GOOGLE_CLIENT_ID
 				+"&client_secret="+SecurityConstants.GOOGLE_CLIENT_SECRET
 				+"&redirect_uri="+SecurityConstants.GOOGLE_REDIRECT_URI_REAL
@@ -127,7 +127,7 @@ public class GoogleSecurityImpl implements GoogleSecurity  {
 			esError = true;
 		}
 		
-		if(DataDto.getError() == null && DataDto.getEmailDomain().equalsIgnoreCase("bbva.com") && esError == false){
+		if(DataDto.getError() == null && DataDto.getEmailDomain().equalsIgnoreCase(SecurityConstants.GOOGLE_DOMAIN_PERMISSION) && esError == false){
 			//Se almacenan datos en sesion
 			AppSessionManager.getInstance().getSessionData(request).setUsuario(new AppUsuarioDTO());
 			AppSessionManager.getInstance().getSessionData(request).getUsuario().setEmailUsuario(DataDto.getEmail());

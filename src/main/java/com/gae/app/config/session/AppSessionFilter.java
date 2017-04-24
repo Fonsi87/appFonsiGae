@@ -47,7 +47,7 @@ public class AppSessionFilter implements Filter {
 		if(AppSessionManager.getInstance().getSessionData(req).getAccessToken() == null && !AppSessionManager.getInstance().getSessionData(req).isEsError()){
 			
 			
-			String urlAuthorizationGoogle = "https://accounts.google.com/o/oauth2/v2/auth?scope="+SecurityConstants.GOOGLE_SCOPE_USER_EMAIL+" "+SecurityConstants.GOOGLE_SCOPE_DRIVE+" "+SecurityConstants.GOOGLE_SCOPE_USER_PROFILE
+			String urlAuthorizationGoogle = SecurityConstants.GOOGLE_API_URL_AUTH+"?scope="+SecurityConstants.GOOGLE_SCOPE_USER_EMAIL+" "+SecurityConstants.GOOGLE_SCOPE_DRIVE+" "+SecurityConstants.GOOGLE_SCOPE_USER_PROFILE
 																						+"&access_type="+SecurityConstants.GOOGLE_ACCESS_TYPE
 																						+"&include_granted_scopes"+SecurityConstants.GOOGLE_INCLUDE_GRANTED_SCOPES
 																						+"&redirect_uri="+SecurityConstants.GOOGLE_REDIRECT_URI
