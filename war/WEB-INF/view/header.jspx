@@ -75,8 +75,8 @@
 						
 						<!-- NOMBRE Y APELLIDOS DE USUARIO -->
 						<li class="user-pref" style="margin-left: 0px;padding-left:0px;background-image:none;">
-		                	<span class="user-name" style="cursor:default;">Ildefonso Garcia Garcia</span>
-		                	<!--span class="user-name" style="cursor:default;">${sessionScope.enzi_session_userlocal.usuario.nombreCompleto}</span-->
+		                	<!--span class="user-name" style="cursor:default;">Ildefonso Garcia Garcia</span-->
+		                	<span class="user-name" style="cursor:default;">${sessionScope.app_session_data.usuario.nombreCompletoUsuario}</span>
 						</li>
 						
 						<!-- BOTON DE DESCONEXION -->

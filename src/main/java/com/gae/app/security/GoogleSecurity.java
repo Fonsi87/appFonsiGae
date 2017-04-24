@@ -11,7 +11,7 @@ import org.springframework.ui.Model;
 public interface GoogleSecurity  {
 
 	
-	public void getAuthGoogle(HttpServletRequest request, Model model, HttpServletResponse response) throws IOException;
+	public boolean getAuthGoogle(HttpServletRequest request, Model model, HttpServletResponse response) throws IOException;
 	
 }
 

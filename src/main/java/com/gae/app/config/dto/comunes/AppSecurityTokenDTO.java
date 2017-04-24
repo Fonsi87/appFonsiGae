@@ -22,6 +22,8 @@ public class AppSecurityTokenDTO extends AppBaseObjectDTO {
 	@JsonProperty(value="id_token")
 	private String idToken;
 	
+	@JsonProperty(value="error")
+	private String error;
 	
 
 	public String getAccessToken() {
@@ -62,6 +64,14 @@ public class AppSecurityTokenDTO extends AppBaseObjectDTO {
 
 	public void setIdToken(String idToken) {
 		this.idToken = idToken;
+	}
+
+	public String getError() {
+		return error;
+	}
+
+	public void setError(String error) {
+		this.error = error;
 	}
 	
 	

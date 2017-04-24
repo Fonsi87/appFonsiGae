@@ -1,10 +1,6 @@
 package com.gae.app.config.dto.comunes;
 
-/**
- * DTO para almacenar los datos de usuario en sesión
- * @author xe28626
- *
- */
+
 public class AppUsuarioDTO extends AppBaseObjectDTO {
 
 	/**
@@ -12,21 +8,29 @@ public class AppUsuarioDTO extends AppBaseObjectDTO {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private String nombreUsuario;
+	private String nombreCompletoUsuario;
 	private String emailUsuario;
+	private String urlUsuarioImagen;
 	
 	
-	public String getNombreUsuario() {
-		return nombreUsuario;
+	
+	public String getNombreCompletoUsuario() {
+		return nombreCompletoUsuario;
 	}
-	public void setNombreUsuario(String nombreUsuario) {
-		this.nombreUsuario = nombreUsuario;
+	public void setNombreCompletoUsuario(String nombreCompletoUsuario) {
+		this.nombreCompletoUsuario = nombreCompletoUsuario;
 	}
 	public String getEmailUsuario() {
 		return emailUsuario;
 	}
 	public void setEmailUsuario(String emailUsuario) {
 		this.emailUsuario = emailUsuario;
+	}
+	public String getUrlUsuarioImagen() {
+		return urlUsuarioImagen;
+	}
+	public void setUrlUsuarioImagen(String urlUsuarioImagen) {
+		this.urlUsuarioImagen = urlUsuarioImagen;
 	}
 	
 	

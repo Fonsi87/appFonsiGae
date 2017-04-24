@@ -1,0 +1,41 @@
+<div id="wrapperContent" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	
+	
+	<!-- CARGA DE IMAGENES -->
+	<spring:url value="/images/favicon.ico" var="favicon" />
+	
+	
+	<!-- CARGA DE MENSAJES -->
+	<spring:message code="message.logout.mensaje1" var="mensajeUno" htmlEscape="false" />
+	<spring:message code="message.logout.mensaje2" var="mensajeDos" htmlEscape="false" />
+  
+ 	<!-- CARGA DE FICHEROS CSS -->
+	<spring:url value="/css/logout/style_logout.css" var="css_style_logout" />
+	<link rel="stylesheet" type="text/css" media="screen" href="${css_style_logout}" />
+  	
+  	
+  	<head>
+		<title>Comités-Prueba</title>
+		<link rel="SHORTCUT ICON" href="${favicon}" />
+	</head>
+	<body>
+		<div id="content">
+			<div id="header">
+		    	<div id="logo" ><br></br></div>
+		        <div id="colores"><br></br></div>
+		        <!-->div id="titulo"><br></br></div-->
+		   	  	<div id="fondo"><br></br></div>    
+		    </div>
+			<div id="acceso2">
+				<div id="user">
+					<div align="center" id="a01">${mensajeUno}</div>
+					<div align="center" id="a02">${mensajeDos}</div>
+				</div>
+		
+		    </div>
+		</div>
+	</body>
+  	
+</div>

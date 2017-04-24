@@ -55,31 +55,54 @@ public class InicioController {
 		
 	    log.info("*** Acceso a InicioController.oauth2callback - INICIO");
 	    
-	    String url = "/inicio";
-	    googleSecurity.getAuthGoogle(request, model, response);
-		
+	    String urlInicio = "/inicio";
+	    String urlError = "/errorcallback";
+	    boolean esError = false;
+	    
+		try {
+			esError = googleSecurity.getAuthGoogle(request, model, response);
+			
+			if(esError == false){
+		    	((HttpServletResponse)response).sendRedirect(urlInicio);
+		    }else{
+		    	((HttpServletResponse)response).sendRedirect(urlError);
+		    }
+			
+		} catch (IOException e) {
+			log.error("ERROR al obtener las credenciales de Google oauth2: " + e);
+			((HttpServletResponse)response).sendRedirect(urlError);
+		}
+	    
 	    log.info("*** Acceso a InicioController.oauth2callback - FIN");
-		
-	    //Se redirige a la vista Inicio
-	    ((HttpServletResponse)response).sendRedirect(url);
 	}
 	
 	
 	
-
+	@RequestMapping(value = "/logout")
+	public String logout(HttpServletRequest request, Model model, HttpServletResponse response) throws IOException {
+		
+	    log.info("*** Acceso a InicioController.logout - INICIO");
+		
+		String url = "logout/logout";
+		AppSessionManager.getInstance().destroySessionObject(request);
+		
+		log.info("*** Acceso a InicioController.logout - FIN");
+		
+		return url;
+	}
 	
-	
-	
-//	@RequestMapping(value = "/logout")
-//	public String logout(HttpServletRequest request, Model model) {
-//		
-//	    log.info("*** Acceso a InicioController.logout - INICIO");
-//		
-//		String url = "logout";
-//		
-//		log.info("*** Acceso a InicioController.logout - FIN");
-//		
-//		return url;
-//	}
+	@RequestMapping(value = "/errorcallback")
+	public String errorCallback(HttpServletRequest request, Model model, HttpServletResponse response) throws IOException {
+		
+	    log.info("*** Acceso a InicioController.errorCallback - INICIO");
+		
+		String url = "errorcallback/error";
+//		AppSessionManager.getInstance().destroySessionObject(request);
+//		((HttpServletResponse)response).sendRedirect(url);
+		
+		log.info("*** Acceso a InicioController.errorCallback - FIN");
+		
+		return url;
+	}
 	
 }

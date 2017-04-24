@@ -21,9 +21,15 @@ public class JstlView extends InternalResourceView {
 		 // set original view being asked for as a request parameter
 		 request.setAttribute("partial", dispatcherPath.substring(urlDefaultJsp.length()));
 		 
-		// force everything to be template.jsp
-		 RequestDispatcher requestDispatcher = request.getRequestDispatcher(defaultJsp);
+		// force everything to be template.jsp (si no es la pantalla de desconexion ni la de error)
+		 RequestDispatcher requestDispatcher;
+		 if(dispatcherPath.substring(urlDefaultJsp.length()).equalsIgnoreCase("logout/logout.jspx") || dispatcherPath.substring(urlDefaultJsp.length()).equalsIgnoreCase("errorcallback/error.jspx")){
+			 requestDispatcher = request.getRequestDispatcher(urlDefaultJsp + dispatcherPath.substring(urlDefaultJsp.length()));
+		 }else{
+			 requestDispatcher = request.getRequestDispatcher(defaultJsp);
+		 }
 		 requestDispatcher.include(request, response);
+		 
 	 
 	 }
  

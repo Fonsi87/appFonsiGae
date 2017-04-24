@@ -24,6 +24,9 @@ public class AppSessionData implements Serializable {
 	//Datos de usuario
 	private AppUsuarioDTO usuario;
 	
+	//Error
+	private boolean esError = false;
+	
 	
 	
 
@@ -87,16 +90,25 @@ public class AppSessionData implements Serializable {
 	public void setAuthCode(String authCode) {
 		this.authCode = authCode;
 	}
+	
 
-	@Override
-	public String toString() {		
-		return "AppSessionData [usuario=" + usuario + ", locale=" + locale 
-				+ ", browserLocal=" + browserLocal + ", accessToken=" + accessToken 
-				+ ", tokenType=" + tokenType + ", expiresIn=" + expiresIn
-				+ ", refreshToken=" + refreshToken + ", idToken=" + idToken
-				+ ", authCode=" + authCode
-				+ "]";
+	public boolean isEsError() {
+		return esError;
 	}
+
+	public void setEsError(boolean esError) {
+		this.esError = esError;
+	}
+
+//	@Override
+//	public String toString() {		
+//		return "AppSessionData [usuario=" + usuario + ", locale=" + locale 
+//				+ ", browserLocal=" + browserLocal + ", accessToken=" + accessToken 
+//				+ ", tokenType=" + tokenType + ", expiresIn=" + expiresIn
+//				+ ", refreshToken=" + refreshToken + ", idToken=" + idToken
+//				+ ", authCode=" + authCode
+//				+ "]";
+//	}
 }
 
 

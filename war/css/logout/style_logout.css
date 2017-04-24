@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face { @font-family: "Stag"; src: url('../../fonts/Stag%20Sans-Book.otf'); format("opentype"); }
+html, body{ margin:0; padding:0; overflow:hidden;}
+#header{width:100%; height:129px;}
+#logo{ background:url(../../images/logout_01.gif) no-repeat; position:absolute; float:left; width:167px;height:129px; z-index:1;}
+#fondo{ background:url(../../images/logout_02.gif) repeat-x;position:absolute; float:left; width:100%;height:129px; z-index:0; }
+#titulo{ background:url(../../images/logout_03.gif) no-repeat; float:right; position:relative; width:237px;height:129px; z-index:2;}
+#colores{ background:url(../../images/logout_04.gif) no-repeat; float:right; position:relative; width:207px;height:129px;z-index:3;}
+#acceso{ margin:15% 32%; width:36%; height:250px;}
+#acceso2{ margin:15% 25%; width:50%; height:250px;}
+#user{ display:block; height:70px;}
+#pass{ display:block;height:70px;}
+#form{ clear:both; padding:5px 0px; }
+#tx1{ display:inline; float:left;  font-size:14px; color:#0083c9; margin-top:5px; font-family: "Stag", sans-serif ;}
+#tx2{ display:inline;float:left;  font-size:14px; color:#33baed; margin-left:5px;margin-top:5px; font-family: "Stag", sans-serif; }
+.form{ background:#f1f1f2; border: solid 1px #cecfd1 ;-Moz-border-radius: 5px;border-radius: 5px; -webkit-box-shadow: 3px 3px 3px #dfdfe1;-moz-box-shadow: 3px 3px 3px #dfdfe1;box-shadow: 3px 3px 3px #dfdfe1; height:25px; width:200px;}
+.Boton{-webkit-box-shadow: 3px 3px 3px #dfdfe1;-moz-box-shadow: 3px 3px 3px #dfdfe1;box-shadow: 3px 3px 3px #dfdfe1;}
+#tx1 a{ font-size:14px; color:#0083c9;font-family: "Stag", sans-serif; text-decoration:none;}
+#tx1 a:hover{ font-size:14px; color:#f7941d;font-family: "Stag", sans-serif; }
+
+#tx2 a{ font-size:14px; color:#33baed;font-family: "Stag", sans-serif; text-decoration:none;}
+#tx2 a:hover{ font-size:14px; color:#f99f36;font-family: "Stag", sans-serif; }
+
+#inter{ background:url(../../images/logout_05.gif) no-repeat; width:33px; height:34px;}
+#log{float:right; margin-top:-42px; height:30px;}
+
+#a01{ font-size:14px; color:#0083c9; margin-top:5px; font-family: "Stag", sans-serif ; margin-bottom:10%;}
+
+#a02{font-size:14px; color:#33baed; margin-left:5px;margin-top:5px; font-family: "Stag", sans-serif; }
+
+.title{ color:#FFFFFF;  font-size:14px; font-family: "Stag", sans-serif; text-decoration:none; background-color:#0068ab; }
+.ruta{font-size:12px; color:#33baed; margin-left:5px;margin-top:5px; font-family: "Stag", sans-serif; }
+.texto{font-size:12px; color:#0083c9; margin-left:5px;margin-top:5px; font-family: "Stag", sans-serif;}
+.ruta2{font-size:13px; color:#33baed; margin-left:5px;margin-top:5px; font-family: "Stag", sans-serif; }
+
+img{margin-bottom:-3px;}
+
+
+.enlace{color:#0083c9;}
+
+#margen{ margin-left:50px;}

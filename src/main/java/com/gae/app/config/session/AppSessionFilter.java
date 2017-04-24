@@ -38,13 +38,13 @@ public class AppSessionFilter implements Filter {
 		log.debug("********** SessionFilter Inicio **********");
 		
 		HttpServletRequest req = (HttpServletRequest) request;
-		
+	
 		if (AppSessionManager.getInstance().getSessionData(req) == null) {
 			this.iniciarSesion(req);							
 		}
 		
 		//Obtencion de autorizacion a traves de oauth2 de Google (solo la primera vez)
-		if(AppSessionManager.getInstance().getSessionData(req).getAccessToken() == null){
+		if(AppSessionManager.getInstance().getSessionData(req).getAccessToken() == null && !AppSessionManager.getInstance().getSessionData(req).isEsError()){
 			
 			
 			String urlAuthorizationGoogle = "https://accounts.google.com/o/oauth2/v2/auth?scope="+SecurityConstants.GOOGLE_SCOPE_USER_EMAIL+" "+SecurityConstants.GOOGLE_SCOPE_DRIVE+" "+SecurityConstants.GOOGLE_SCOPE_USER_PROFILE
@@ -79,6 +79,7 @@ public class AppSessionFilter implements Filter {
 		
 		// 1.- Se inicializa el objeto de sesion
 		AppSessionData sesionObject = AppSessionManager.getInstance().initSession(httpServletRequest);
+		sesionObject.setEsError(false);
 				
 		// 2.- Se informe el locale
 		String locale = AppSessionManager.getInstance().getSessionData(httpServletRequest).getLocale();
