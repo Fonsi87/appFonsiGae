@@ -55,11 +55,13 @@ public class InicioController {
 		
 	    log.info("*** Acceso a InicioController.oauth2callback - INICIO");
 	    
+	    String url = "/inicio";
 	    googleSecurity.getAuthGoogle(request, model, response);
 		
 	    log.info("*** Acceso a InicioController.oauth2callback - FIN");
-	    menuInicio(request, model, response);
 		
+	    //Se redirige a la vista Inicio
+	    ((HttpServletResponse)response).sendRedirect(url);
 	}
 	
 	

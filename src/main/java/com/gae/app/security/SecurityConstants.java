@@ -20,8 +20,8 @@ public class SecurityConstants {
 	   
 	   // Scope (cambiar "/" por "%2F" y ":" por "%3A")
 	   public static final String GOOGLE_SCOPE_DRIVE = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive";
-	   public static final String GOOGLE_SCOPE_EMAIL = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email";
-	   public static final String GOOGLE_SCOPE_TOKEN = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email";
+	   public static final String GOOGLE_SCOPE_USER_EMAIL = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email";
+	   public static final String GOOGLE_SCOPE_USER_PROFILE = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile";
 	   
 	   // Access Type
 	   public static final String GOOGLE_ACCESS_TYPE = "offline";
